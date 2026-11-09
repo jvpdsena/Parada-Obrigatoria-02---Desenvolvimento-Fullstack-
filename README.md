@@ -67,3 +67,14 @@ A Livraria Inclusiva oferece um conjunto de funcionalidades que simulam a experi
 
 Os livros e valores apresentados são fictícios e utilizados exclusivamente para fins acadêmicos.
 
+## 5. Publicação
+
+A aplicação Livraria Inclusiva foi publicada na plataforma Vercel, utilizando integração com o repositório GitHub.
+
+**Acesse a aplicação:** https://parada-obrigatoria-02-desenvolvimen.vercel.app
+
+A publicação utiliza o framework Vite, com compilação por meio do comando `npm run build` e disponibilização dos arquivos gerados no diretório `dist`.
+
+O código-fonte está disponível no GitHub:
+
+https://github.com/jvpdsena/Parada-Obrigatoria-02---Desenvolvimento-Fullstack-
