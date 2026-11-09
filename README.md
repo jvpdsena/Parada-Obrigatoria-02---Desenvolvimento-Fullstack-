@@ -1,51 +1,69 @@
-# Livraria Inclusiva — Atividade de Acessibilidade Web
+# Livraria Inclusiva — Acessibilidade Web com React
 
-## Objetivo
-Implementar uma livraria em React com Redux e React Router e aplicar melhorias de acessibilidade alinhadas às WCAG 2.2, especialmente critérios de nível A e AA.
+## 1. Apresentação
 
-## Requisitos
-Node.js 18+ e npm.
+Este repositório contém o projeto **Livraria Inclusiva**, desenvolvido como parte da atividade **Parada Obrigatória 02 — Desenvolvimento Fullstack**, do curso de Ciência de Dados e Inteligência Artificial do SENAI CIMATEC.
 
-## Execução
-```bash
-npm install
-npm run dev
-```
-Abra o endereço informado pelo Vite (normalmente http://localhost:5173).
+O projeto consiste em uma aplicação de livraria online desenvolvida com React, Redux e React Router, com foco na implementação, avaliação e validação de melhorias de acessibilidade digital.
 
-## Funcionalidades
-- Catálogo de livros, pesquisa por título/autor, adição ao carrinho.
-- Carrinho com quantidade, subtotal, total, remoção e limpeza.
-- Navegação entre páginas via React Router.
-- Estado centralizado com Redux.
+A proposta foi demonstrar como decisões de desenvolvimento frontend podem afetar a experiência de pessoas com deficiência, especialmente aquelas que utilizam tecnologias assistivas, como leitores de tela, ou dependem da navegação por teclado.
 
-## Melhorias implementadas
-| Recurso | Implementação | Critérios WCAG relacionados |
-|---|---|---|
-| Idioma da página | `lang="pt-BR"` | 3.1.1 |
-| Estrutura semântica | `header`, `nav`, `main`, `section`, `footer`, títulos hierárquicos | 1.3.1 |
-| Navegação por teclado | Links, campos e botões nativos; link para pular conteúdo | 2.1.1, 2.4.1 |
-| Foco visível | Contorno de foco destacado e foco no conteúdo após troca de rota | 2.4.7 |
-| Nomes acessíveis | Labels explícitos, `aria-label` em ações contextualizadas | 4.1.2 |
-| Texto alternativo | Elementos de capa ilustrativos identificados com `role="img"` e `aria-label` | 1.1.1 |
-| Feedback de ações | Região `role="status"` com `aria-live="polite"` | 4.1.3 |
-| Contraste | Cores escuras sobre superfícies claras e botões com texto branco | 1.4.3 (a verificar em auditoria) |
-| Adaptação | Grid responsivo e controles com altura mínima de 44px | 1.4.10, 2.5.8 |
-| Movimento reduzido | Transições condicionadas à preferência do sistema | 2.3.3 (boa prática) |
-| Título por página | Atualização de `document.title` na mudança de rota | 2.4.2 |
+Para isso, foram utilizadas duas versões da aplicação: uma versão inicial, contendo barreiras de acessibilidade, e uma versão aprimorada, desenvolvida com base nas recomendações das **Web Content Accessibility Guidelines (WCAG) 2.2**.
 
-**Observação:** a presença de uma técnica não comprova conformidade integral com a WCAG. É necessário testar a aplicação.
+## 2. Objetivos
 
-## Auditoria Lighthouse (a realizar localmente)
-1. Execute `npm install` e `npm run dev`.
-2. Abra a aplicação no Chrome e pressione F12.
-3. Acesse Lighthouse > Accessibility > Analyze page load.
-4. Registre a pontuação e os problemas apontados para a rota `/`.
-5. Repita na rota `/cart` com e sem itens.
-6. Faça testes manuais com Tab, Shift+Tab, Enter e leitor de tela (NVDA, por exemplo).
-7. Guarde capturas do relatório inicial e final; se necessário, crie uma versão base sem as melhorias para comparação legítima.
+O objetivo geral do projeto foi identificar, corrigir e avaliar problemas de acessibilidade em uma aplicação web, aplicando boas práticas de desenvolvimento inclusivo.
 
-## Limitações
-- Os livros e valores são fictícios para demonstração; não há checkout ou persistência após atualizar a página.
-- Não foi executado Lighthouse neste ambiente. Não são fornecidas pontuações inventadas.
-- As capturas do enunciado mostram apenas parte da Etapa 2; requisitos adicionais devem ser conferidos no AVA.
+Entre os objetivos específicos, destacam-se:
+
+- Desenvolver uma aplicação funcional de livraria online utilizando React.
+- Implementar o gerenciamento de estado global com Redux.
+- Utilizar React Router para navegação entre páginas.
+- Identificar barreiras de acessibilidade por meio do Lighthouse.
+- Corrigir problemas relacionados à semântica HTML, contraste, navegação por teclado e identificação de elementos interativos.
+- Melhorar a compatibilidade com leitores de tela.
+- Validar as modificações por meio de auditorias automatizadas e testes manuais.
+- Comparar os resultados obtidos antes e depois das intervenções.
+
+## 3. Tecnologias utilizadas
+
+| Tecnologia | Aplicação |
+|---|---|
+| React | Desenvolvimento da interface e dos componentes |
+| JavaScript (JSX) | Implementação da lógica e das funcionalidades |
+| Vite | Ambiente de desenvolvimento e ferramenta de build |
+| Redux | Gerenciamento centralizado do estado da aplicação |
+| React Router | Navegação entre páginas |
+| HTML5 | Estrutura semântica e elementos acessíveis |
+| CSS3 | Estilização, responsividade e indicadores de foco |
+| Lighthouse | Auditoria automatizada de acessibilidade |
+| NVDA | Avaliação com leitor de tela |
+| Git e GitHub | Versionamento e disponibilização do código |
+
+## 4. Funcionalidades da aplicação
+
+A Livraria Inclusiva oferece um conjunto de funcionalidades que simulam a experiência de utilização de uma plataforma de comércio eletrônico.
+
+### Catálogo de livros
+
+- Visualização de livros disponíveis.
+- Exibição de títulos, autores e preços.
+- Pesquisa por título ou autor.
+- Adição de produtos ao carrinho.
+
+### Carrinho de compras
+
+- Visualização dos produtos selecionados.
+- Gerenciamento de quantidades.
+- Cálculo de subtotais e valor total.
+- Remoção individual de produtos.
+- Limpeza do carrinho.
+
+### Navegação
+
+- Navegação entre catálogo e carrinho.
+- Gerenciamento das rotas com React Router.
+- Estrutura responsiva para diferentes tamanhos de tela.
+
+Os livros e valores apresentados são fictícios e utilizados exclusivamente para fins acadêmicos.
+
